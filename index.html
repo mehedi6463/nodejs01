@@ -18,25 +18,44 @@
         
        });
        class Animal {
+            sound() {
+            console.log("Animal Sound");
+            }
+        }
 
-    sound() {
-        console.log("Animal Sound");
-    }
+        class Dog extends Animal {
 
-}
+            sound() {
+                super.sound();
+                console.log("Dog Barking");
+            }
 
-class Dog extends Animal {
+        }
 
-    sound() {
-        super.sound();
-        console.log("Dog Barking");
-    }
+        const dog = new Dog();
 
-}
+        dog.sound();
+        class BankAccount {
 
-const dog = new Dog();
+            #balance = 5000;
 
-dog.sound();
+            getBalance() {
+                return this.#balance;
+            }
+
+        }
+
+        class PremiumAccount extends BankAccount {
+
+            showBalance() {
+                console.log(super.getBalance());
+            }
+
+        }
+
+        const account = new PremiumAccount();
+
+        account.showBalance();
     </script>
 
 </body>
