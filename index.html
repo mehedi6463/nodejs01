@@ -16,7 +16,27 @@
        bttn.addEventListener("click", () => {
         let ptag = document.getElementById("ptag").innerHTML ="Are you ready for learn Node";
         
-       })
+       });
+       class Animal {
+
+    sound() {
+        console.log("Animal Sound");
+    }
+
+}
+
+class Dog extends Animal {
+
+    sound() {
+        super.sound();
+        console.log("Dog Barking");
+    }
+
+}
+
+const dog = new Dog();
+
+dog.sound();
     </script>
 
 </body>
